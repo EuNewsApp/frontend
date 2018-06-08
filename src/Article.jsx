@@ -7,60 +7,68 @@ import { Highlight } from 'react-instantsearch/dom';
 import moment from 'moment';
 import './Article.css';
 
+import symbolbild from './symbolbild.png';
+
 function mapEmoji(countryCode) {
-    switch(countryCode) {
-        case 'BG':
-            return '🇧🇪'
-        case 'DE':
-            return '🇩🇪';
-        case 'ES':
-            return '🇪🇸';
-        case 'FR':
-            return '🇫🇷';
-        case 'GR':
-            return '🇬🇷';
-        case 'IT':
-            return '🇮🇹';
-        case 'NL':
-            return '🇳🇱';
-        case 'PL':
-            return '🇵🇱';
-        case 'RO':
-            return '🇷🇴';
-        case 'UK':
-            return '🇬🇧';
-        default:
-            return '❓';
+    switch (countryCode) {
+    case 'BG':
+        return '🇧🇪';
+    case 'DE':
+        return '🇩🇪';
+    case 'ES':
+        return '🇪🇸';
+    case 'FR':
+        return '🇫🇷';
+    case 'GR':
+        return '🇬🇷';
+    case 'IT':
+        return '🇮🇹';
+    case 'NL':
+        return '🇳🇱';
+    case 'PL':
+        return '🇵🇱';
+    case 'RO':
+        return '🇷🇴';
+    case 'UK':
+        return '🇬🇧';
+    default:
+        return '❓';
     }
 }
 
 function mapPublishers(publisher) {
-    switch(publisher) {
-        case 'Spiegel':
-            return 'https://upload.wikimedia.org/wikipedia/commons/4/4f/Spiegel-Online-Logo.svg';
-        case 'Süddeutsche':
-            return 'https://upload.wikimedia.org/wikipedia/commons/thumb/4/42/S%C3%BCddeutsche_Zeitung_Logo.svg/1024px-S%C3%BCddeutsche_Zeitung_Logo.svg.png';
-        case 'Le Monde':
-            return 'https://upload.wikimedia.org/wikipedia/commons/thumb/4/43/Le_Monde.svg/2000px-Le_Monde.svg.png';
-        case 'Daily Telegraph':
-            return 'https://upload.wikimedia.org/wikipedia/commons/thumb/e/e7/Daily_Telegraph.svg/2000px-Daily_Telegraph.svg.png';
-        case 'La Repubblica':
-            return 'http://www.carloloforti.com/wp-content/uploads/2016/09/Logo-La-Repubblica-small.jpg';
-        case 'Le Figaro':
-            return 'https://upload.wikimedia.org/wikipedia/en/thumb/f/f8/Le_Figaro_logo.svg/1280px-Le_Figaro_logo.svg.png';
-        case 'Corriere della Sera':
-            return 'https://upload.wikimedia.org/wikipedia/commons/thumb/9/9d/Corriere_della_Sera.svg/2000px-Corriere_della_Sera.svg.png';
-        case 'La Stampa':
-            return 'https://upload.wikimedia.org/wikipedia/commons/thumb/f/f6/La_Stampa.svg/9405px-La_Stampa.svg.png';
-        case 'El Pais':
-            return 'https://upload.wikimedia.org/wikipedia/commons/thumb/3/3e/El_Pais_logo_2007.svg/2000px-El_Pais_logo_2007.svg.png';
-        case 'El Mundo':
-            return 'https://logos-download.com/wp-content/uploads/2016/05/El_Mundo_logo.png';
-        case 'ABC':
-            return 'https://www.gbc.gi/uploads/news/18gJ9_abc.jpg';
-        case '':
+    switch (publisher) {
+    case 'Spiegel':
+        return 'https://upload.wikimedia.org/wikipedia/commons/4/4f/Spiegel-Online-Logo.svg';
+    case 'Süddeutsche':
+        return 'https://upload.wikimedia.org/wikipedia/commons/thumb/4/42/S%C3%BCddeutsche_Zeitung_Logo.svg/1024px-S%C3%BCddeutsche_Zeitung_Logo.svg.png';
+    case 'Le Monde':
+        return 'https://upload.wikimedia.org/wikipedia/commons/thumb/4/43/Le_Monde.svg/2000px-Le_Monde.svg.png';
+    case 'Daily Telegraph':
+        return 'https://upload.wikimedia.org/wikipedia/commons/thumb/e/e7/Daily_Telegraph.svg/2000px-Daily_Telegraph.svg.png';
+    case 'La Repubblica':
+        return 'https://upload.wikimedia.org/wikipedia/commons/thumb/e/ef/La_Repubblica_Logo.svg/1286px-La_Repubblica_Logo.svg.png';
+    case 'Le Figaro':
+        return 'https://upload.wikimedia.org/wikipedia/en/thumb/f/f8/Le_Figaro_logo.svg/1280px-Le_Figaro_logo.svg.png';
+    case 'Corriere della Sera':
+        return 'https://upload.wikimedia.org/wikipedia/commons/thumb/9/9d/Corriere_della_Sera.svg/2000px-Corriere_della_Sera.svg.png';
+    case 'La Stampa':
+        return 'https://upload.wikimedia.org/wikipedia/commons/thumb/f/f6/La_Stampa.svg/9405px-La_Stampa.svg.png';
+    case 'El Pais':
+        return 'https://upload.wikimedia.org/wikipedia/commons/thumb/3/3e/El_Pais_logo_2007.svg/2000px-El_Pais_logo_2007.svg.png';
+    case 'El Mundo':
+        return 'https://logos-download.com/wp-content/uploads/2016/05/El_Mundo_logo.png';
+    case 'ABC':
+        return 'https://www.gbc.gi/uploads/news/18gJ9_abc.jpg';
+    case 'Le Soir':
+        return 'https://upload.wikimedia.org/wikipedia/commons/thumb/9/9f/Logo_du_journal_Le_Soir.svg/2000px-Logo_du_journal_Le_Soir.svg.png';
+    case 'The Guardian':
+        return 'https://upload.wikimedia.org/wikipedia/commons/thumb/0/0e/The_Guardian.svg/2000px-The_Guardian.svg.png';
+    case 'BBC':
+        return 'https://upload.wikimedia.org/wikipedia/commons/thumb/e/eb/BBC.svg/1280px-BBC.svg.png';
+    default:
+        return '❓';
     }
-    return '❓';
 }
 
 function formatTime(time) {
@@ -78,15 +86,16 @@ class Article extends React.Component {
             source,
             img,
             pubDate,
+            link,
         } = hit;
 
         const tags = [];
         return (
             <div className={this.props.isBigPicture ? 'Article bigPicture' : 'Article'}>
-                <img className='Article-thumb' src={img ? img : 'https://s2.reutersmedia.net/resources/r/?m=02&d=20180608&t=2&i=1270372000&w=1200&r=LYNXNPEE570NG'}/>
+                <img className='Article-thumb' src={img || symbolbild}/>
                 <div className='Article-text'>
-                    <span className='Article-text_title'>{mapEmoji(country)} <Highlight attribute={titleEn === null ? "title" : "titleEn"} hit={hit}/></span>
-                    <span className='Article-text_headline'><Highlight attribute={headlineEn === null ? "headline" : "headlineEn"} hit={hit}/></span>
+                    <a href={link} className='Article-text_title'>{mapEmoji(country)} <Highlight attribute={titleEn === null ? 'title' : 'titleEn'} hit={hit}/></a>
+                    <span className='Article-text_headline'><Highlight attribute={headlineEn === null ? 'headline' : 'headlineEn'} hit={hit}/></span>
                     <div className='row'>
                         <img className='logo' src={mapPublishers(source)} alt={source}/>
                         <span>{formatTime(pubDate)}</span>

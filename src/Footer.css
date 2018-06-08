@@ -1,0 +1,28 @@
+.Footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    align-content: center;
+    padding: 20px 70px;
+}
+
+.Footer a, .Footer a:visited {
+    color: black;
+    text-decoration: none;
+    margin-left: 10px;
+}
+
+.Footer a:hover, .Contact .Footer a:hover svg {
+    cursor: pointer;
+    -webkit-animation: colorfade 3s infinite;
+    -moz-animation: colorfade 3s infinite;
+    -o-animation: colorfade 3s infinite;
+    -ms-animation: colorfade 3s infinite;
+    animation: colorfade 3s infinite;
+}
+
+@media(max-width: 850px) {
+    .Footer {
+        flex-direction: column;
+    }
+}

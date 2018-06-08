@@ -4,6 +4,7 @@ import { InstantSearch, Hits, SearchBox } from 'react-instantsearch/dom';
 
 import Header from './Header.jsx';
 import Article from './Article.jsx';
+import Footer from './Footer.jsx';
 
 import './index.css';
 
@@ -18,6 +19,7 @@ ReactDOM.render(
                 <SearchBox />
             </Header>
             <Hits hitComponent={Article}/>
+            <Footer/>
         </InstantSearch>
     </div>,
     document.getElementById('app')

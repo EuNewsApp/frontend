@@ -37,10 +37,6 @@ module.exports = {
     },
     plugins: [
         new webpack.HotModuleReplacementPlugin(),
-    // new WebpackMonitor({
-    //  capture: true,
-    //  launch: true,
-    // }),
     ],
     devServer: {
         contentBase: './dist',
