@@ -4,15 +4,16 @@ import * as React from 'react';
 import PropTypes from 'prop-types';
 import './Header.css';
 
-import flag from './flag.svg';
+import logo from './logo_eupinions.png';
 
 class Header extends React.Component {
     render() {
         return (
             <div className="Header">
-                <h1>Menu</h1>
-                <img src={flag} className="Header-flag" alt="logo" />
-                {this.props.children}
+                <div className="Header-center">
+                    <img className="header-logo" src={logo}/>
+                    {this.props.children}
+                </div>
             </div>
         );
     }

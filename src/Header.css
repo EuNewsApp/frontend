@@ -1,11 +1,52 @@
 .Header {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: space-between;
+    background: #a7adba;
+    box-shadow: 0 .125rem .313rem rgba(0,0,0,.2);
 }
 
-.Header-flag {
-    height: 80px;
-    margin-right: 20px;
+.Header-center {
+    max-width: 75%;
+    margin-left: 12.5%;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    align-content: center;
+}
+
+.header-logo {
+    height: 85px;
+    width: auto;
+    margin: 30px 0;
+}
+
+.ais-SearchBox-form {
+    display: flex;
+    flex-direction: row;
+}
+.ais-SearchBox-input {
+    padding: 8px 8px 8px 20px;
+    border-top-left-radius: 5px;
+    border-bottom-left-radius: 5px;
+    flex: 1 1 auto;
+    border: 1px solid black;
+    font-size: 20px;
+}
+.ais-SearchBox-submit {
+    border-top-right-radius: 5px;
+    border-bottom-right-radius: 5px;
+    cursor: pointer;
+    border: 1px solid black;
+    border-left: 0;
+    padding: 0px 20px 0px 20px;
+    background: gray;
+    color: white;
+    font-weight: bold;
+    font-size: 20px;
+}
+.ais-SearchBox-submitIcon {
+    width: 20px;
+    height: 20px;
+}
+.ais-SearchBox-reset {
+    display: none;
 }
