@@ -1,6 +1,7 @@
-.Article {
+.Article, .row {
     display: flex;
     flex-direction: row;
+    align-items: center;
 }
 
 .Article-text {
@@ -9,15 +10,36 @@
 }
 
 .Article-text_title {
-    font-size: 20px;
-    font-weight: bold;   
+    font-size: 22px;
+    font-weight: bold;
+    margin-bottom: 3px;
 }
 
-Article-text_headline {
+.Article-text_headline {
+    font-size: 17px;
+    margin-bottom: 2px;
+}
+
+.Article-text_tag {
+    color: #585858;
+    background-color: #f1f1f1;
+    padding-left: 4px;
+    padding-right: 4px;
+    padding: 4px 4px;
+    box-sizing: inherit;
+    border-radius: 4px;
+    display: inline-table;
+    margin: 2px;
+    text-align: center;
     font-size: 15px;
 }
 
-.Article img {
+.logo {
+    height: 15px;
+    margin-right: 5px;
+}
+
+.Article-thumb {
     width: 72px;
     height: 72px;
     background-size: cover;
