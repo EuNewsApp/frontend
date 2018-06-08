@@ -13,6 +13,7 @@ const articles = [
         headline: 'The EU wants to break the market power of Google\'s Android operating system. According to the Financial Times, such antitrust proceedings could end with a record fine in the billions.',
         tags: ['Computers & Electronics'],
         logo: 'https://upload.wikimedia.org/wikipedia/commons/4/4f/Spiegel-Online-Logo.svg',
+        isBigPicture: true
     }, {
         flag: '🇮🇹',
         title: 'Guzzetti on Piersanti Mattarella: "More respect for the lay martyrs of our society".',

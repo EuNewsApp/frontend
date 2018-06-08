@@ -1,7 +1,29 @@
-.Article, .row {
+.Article {
     display: flex;
     flex-direction: row;
     align-items: center;
+    justify-content: center;
+    width: 75%;
+    margin: 20px auto;
+}
+
+.row{
+  justify-content: flex-start;
+  align-items: flex-start;
+  margin: 0;
+}
+
+.bigPicture {
+    flex-direction: column;
+}
+
+.bigPicture .Article-thumb {
+    width: 100%;
+    height: auto;
+    max-height: 250px;
+    object-fit: cover;
+    border: 5px solid green;
+    flex-direction: row;
 }
 
 .Article-text {
