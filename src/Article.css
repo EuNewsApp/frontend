@@ -1,8 +1,6 @@
 .Article {
     display: flex;
     flex-direction: row;
-    align-items: center;
-    justify-content: center;
     width: 75%;
     margin: 20px auto;
 }
@@ -40,6 +38,12 @@
 .Article-text_headline {
     font-size: 17px;
     margin-bottom: 2px;
+}
+
+.ais-Highlight-highlighted {
+    background: orange;
+    font-style: normal;
+    padding: 2px 0 0 2px;
 }
 
 .Article-text_tag {
