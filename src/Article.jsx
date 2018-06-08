@@ -4,6 +4,7 @@
 import * as React from 'react';
 import PropTypes from 'prop-types';
 import { Highlight } from 'react-instantsearch/dom';
+import moment from 'moment';
 import './Article.css';
 
 function mapEmoji(countryCode) {
@@ -62,10 +63,9 @@ function mapPublishers(publisher) {
     return '❓';
 }
 
-function strip(html) {
-   var tmp = document.createElement("DIV");
-   tmp.innerHTML = html;
-   return tmp.textContent || tmp.innerText || "";
+function formatTime(time) {
+    console.log(time);
+    return moment(time).fromNow();
 }
 
 class Article extends React.Component {
@@ -77,6 +77,7 @@ class Article extends React.Component {
             country,
             source,
             img,
+            pubDate,
         } = hit;
 
         const tags = [];
@@ -88,7 +89,7 @@ class Article extends React.Component {
                     <span className='Article-text_headline'><Highlight attribute={headlineEn === null ? "headline" : "headlineEn"} hit={hit}/></span>
                     <div className='row'>
                         <img className='logo' src={mapPublishers(source)} alt={source}/>
-                        
+                        <span>{formatTime(pubDate)}</span>
                         {tags.length === 0 ? (<div/>) : (<span style={{ marginRight: '5px' }}>&#9679;</span>)}
                         {tags.map((tag, i) => (<span key={i} className='Article-text_tag'>{tag}</span>))}
                     </div>
