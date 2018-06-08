@@ -1,0 +1,10 @@
+.Header {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.Header-flag {
+    height: 80px;
+    margin-right: 20px;
+} 
