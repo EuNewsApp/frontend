@@ -50,3 +50,19 @@
 .ais-SearchBox-reset {
     display: none;
 }
+
+@media(max-width: 850px) {
+    .Header-center {
+        flex-direction: column;
+    }
+
+    .header-logo {
+        height: 50px;
+        width: auto;
+        margin: 10px 0;
+    }
+
+    .ais-SearchBox-form {
+        margin-bottom: 10px;
+    }
+}
