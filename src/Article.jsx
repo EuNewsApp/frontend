@@ -87,9 +87,10 @@ class Article extends React.Component {
             img,
             pubDate,
             link,
+            categories
         } = hit;
 
-        const tags = [];
+        const tags = categories || [];
         return (
             <div className={this.props.isBigPicture ? 'Article bigPicture' : 'Article'}>
                 <img className='Article-thumb' src={img || symbolbild} style={{ float: 'left' }}/>
@@ -99,8 +100,7 @@ class Article extends React.Component {
                     <div className='row'>
                         <img className='logo' src={mapPublishers(source)} alt={source}/>
                         <span>{formatTime(pubDate)}</span>
-                        {tags.length === 0 ? (<div/>) : (<span style={{ marginRight: '5px' }}>&#9679;</span>)}
-                        {tags.map((tag, i) => (<span key={i} className='Article-text_tag'>{tag}</span>))}
+                        {tags.map((tag, i) => (<span key={i} className='Article-text_tag'>{tag.replace(/^\/+/g, '')}</span>))}
                     </div>
                 </div>
             </div>
