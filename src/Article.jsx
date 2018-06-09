@@ -92,9 +92,9 @@ class Article extends React.Component {
         const tags = [];
         return (
             <div className={this.props.isBigPicture ? 'Article bigPicture' : 'Article'}>
-                <img className='Article-thumb' src={img || symbolbild}/>
-                <div className='Article-text'>
-                    <a href={link} className='Article-text_title'>{mapEmoji(country)} <Highlight attribute={titleEn === null ? 'title' : 'titleEn'} hit={hit}/></a>
+                <img className='Article-thumb' src={img || symbolbild} style={{ float: 'left' }}/>
+                <a href={link} className='Article-text_title'>{mapEmoji(country)} <Highlight attribute={titleEn === null ? 'title' : 'titleEn'} hit={hit}/></a>
+                <div>
                     <span className='Article-text_headline'><Highlight attribute={headlineEn === null ? 'headline' : 'headlineEn'} hit={hit}/></span>
                     <div className='row'>
                         <img className='logo' src={mapPublishers(source)} alt={source}/>
