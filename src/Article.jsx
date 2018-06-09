@@ -27,6 +27,8 @@ function mapEmoji(countryCode) {
         return '🇳🇱';
     case 'PL':
         return '🇵🇱';
+    case 'PT':
+        return '🇵🇹';
     case 'RO':
         return '🇷🇴';
     case 'UK':
@@ -66,6 +68,10 @@ function mapPublishers(publisher) {
         return 'https://upload.wikimedia.org/wikipedia/commons/thumb/0/0e/The_Guardian.svg/2000px-The_Guardian.svg.png';
     case 'BBC':
         return 'https://upload.wikimedia.org/wikipedia/commons/thumb/e/eb/BBC.svg/1280px-BBC.svg.png';
+    case 'Observador':
+        return 'https://i1.wp.com/rubberchickengames.com/wp-content/uploads/2015/03/observador.jpg?resize=1024%2C306';
+    case 'Jornal de Notícias':
+        return 'http://www.tvmana1.com/imagens_noticias/618x294_jornal-de-noticias-e-o-primeiro-jornal-portugues-a-ter-artigos-no-instant-articles-do-facebook.jpeg';
     default:
         return '❓';
     }
