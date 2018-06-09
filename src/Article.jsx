@@ -1,5 +1,6 @@
 /* eslint class-methods-use-this: 0 */
 /* eslint camelcase: 0 */
+/* eslint prefer-template: 0 */
 
 import * as React from 'react';
 import PropTypes from 'prop-types';
@@ -96,11 +97,13 @@ class Article extends React.Component {
             categories
         } = hit;
 
+        const trLink = 'https://translate.google.com/translate?sl=auto&tl=en&js=y&act=url&u=' + encodeURIComponent(link);
+
         const tags = categories || [];
         return (
             <div className={this.props.isBigPicture ? 'Article bigPicture' : 'Article'}>
                 <img className='Article-thumb' src={img || symbolbild} style={{ float: 'left' }}/>
-                <a href={link} className='Article-text_title'>{mapEmoji(country)} <Highlight attribute={titleEn === null ? 'title' : 'titleEn'} hit={hit}/></a>
+                <a href={trLink} className='Article-text_title'>{mapEmoji(country)} <Highlight attribute={titleEn === null ? 'title' : 'titleEn'} hit={hit}/></a>
                 <div>
                     <span className='Article-text_headline'><Highlight attribute={headlineEn === null ? 'headline' : 'headlineEn'} hit={hit}/></span>
                     <div className='row'>
