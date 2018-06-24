@@ -1,0 +1,28 @@
+image: node:alpine
+
+stages:
+  - build
+  - dockerize
+
+cache:
+  key: node
+  paths:
+    - node_modules
+
+build:
+  stage: build
+  before_script:
+    - npm install
+  script:
+    - npm run build
+  artifacts:
+    paths:
+      - dist/
+
+dockerize:
+  stage: dockerize
+  image: docker
+  services:
+    - docker:dind
+  script:
+    - docker build .
