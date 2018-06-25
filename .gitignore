@@ -1,4 +1,6 @@
 node_modules/
 dist/*
+!dist/eunify_logo.png
+!dist/eunify_logo_large.png
 !dist/index.html
 !dist/manifest.json
