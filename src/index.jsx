@@ -4,6 +4,7 @@ import { InstantSearch, Hits, SearchBox } from 'react-instantsearch/dom';
 
 import Header from './Header.jsx';
 import Article from './Article.jsx';
+import AlgoliaAttribution from './AlgoliaAttribution.jsx';
 import Footer from './Footer.jsx';
 
 import './index.css';
@@ -13,12 +14,12 @@ ReactDOM.render(
         <InstantSearch
             appId="XDUDYBW7A8"
             apiKey="08e26b198e4db12a9df52b2f6d6ec16a"
-            indexName="articles"
-        >
+            indexName="articles">
             <Header>
                 <SearchBox />
             </Header>
             <Hits hitComponent={Article}/>
+            <AlgoliaAttribution/>
             <Footer/>
         </InstantSearch>
     </div>,

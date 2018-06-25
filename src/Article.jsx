@@ -79,7 +79,6 @@ function mapPublishers(publisher) {
 }
 
 function formatTime(time) {
-    console.log(time);
     return moment(time).fromNow();
 }
 
