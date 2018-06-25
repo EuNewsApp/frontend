@@ -1,9 +1,9 @@
 {
-  "short_name": "MVP",
-  "name": "YummyORG MVP!",
+  "short_name": "Eunify",
+  "name": "Eunify",
   "icons": [
     {
-      "src": "favicon.ico",
+      "src": "eunify_logo.png",
       "sizes": "64x64 32x32 24x24 16x16",
       "type": "image/x-icon"
     }
