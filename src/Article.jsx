@@ -99,9 +99,16 @@ class Article extends React.Component {
         const trLink = 'https://translate.google.com/translate?sl=auto&tl=en&js=y&act=url&u=' + encodeURIComponent(link);
 
         const tags = categories || [];
+
+        let proxiedImage = '';
+        if (img !== null) {
+            proxiedImage = img.startsWith('https') ? img : `https://imageproxy.gerogerke.de/${img}`;
+        } else {
+            proxiedImage = symbolbild;
+        }
         return (
             <div className={this.props.isBigPicture ? 'Article bigPicture' : 'Article'}>
-                <img className='Article-thumb' src={img || symbolbild} style={{ float: 'left' }}/>
+                <img className='Article-thumb' src={proxiedImage} style={{ float: 'left' }}/>
                 <a href={trLink} className='Article-text_title'>{mapEmoji(country)} <Highlight attribute={titleEn === null ? 'title' : 'titleEn'} hit={hit}/></a>
                 <div>
                     <span className='Article-text_headline'><Highlight attribute={headlineEn === null ? 'headline' : 'headlineEn'} hit={hit}/></span>
