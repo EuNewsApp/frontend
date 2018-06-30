@@ -1,10 +1,9 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import { InstantSearch, Hits, SearchBox } from 'react-instantsearch/dom';
+import { InstantSearch, Hits, SearchBox, Pagination } from 'react-instantsearch/dom';
 
 import Header from './Header.jsx';
 import Article from './Article.jsx';
-import AlgoliaAttribution from './AlgoliaAttribution.jsx';
 import Footer from './Footer.jsx';
 
 import './index.css';
@@ -19,7 +18,7 @@ ReactDOM.render(
                 <SearchBox />
             </Header>
             <Hits hitComponent={Article}/>
-            <AlgoliaAttribution/>
+            <Pagination/>
             <Footer/>
         </InstantSearch>
     </div>,

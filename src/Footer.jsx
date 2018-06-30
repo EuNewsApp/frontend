@@ -1,6 +1,9 @@
 /* eslint class-methods-use-this: 0 */
+/* eslint camelcase: 0 */
 
 import * as React from 'react';
+
+import algolia_logo from './algolia_logo.svg';
 
 import './Footer.css';
 
@@ -8,7 +11,7 @@ class Footer extends React.Component {
     render() {
         return (
             <div className="Footer">
-                <p>&copy; 2018 EuNewsApp Team</p>
+                <img src={algolia_logo}/>
                 <div>
                     Made for beyond borders Hackathon Aachen
                 </div>
