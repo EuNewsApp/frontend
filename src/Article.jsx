@@ -86,15 +86,18 @@ class Article extends React.Component {
     render() {
         const { hit } = this.props;
         const {
-            headlineEn,
-            titleEn,
-            country,
             source,
+            link,
             img,
             pubDate,
-            link,
-            categories
+            translations,
+            categories,
         } = hit;
+
+        const {
+            name: sourceName,
+            country: sourceCountry,
+        } = source;
 
         const trLink = 'https://translate.google.com/translate?sl=auto&tl=en&js=y&act=url&u=' + encodeURIComponent(link);
 
@@ -107,13 +110,13 @@ class Article extends React.Component {
             proxiedImage = symbolbild;
         }
         return (
-            <div className={this.props.isBigPicture ? 'Article bigPicture' : 'Article'}>
+            <div className='Article'>
                 <img className='Article-thumb' src={proxiedImage} style={{ float: 'left' }}/>
-                <a href={trLink} className='Article-text_title'>{mapEmoji(country)} <Highlight attribute={titleEn === null ? 'title' : 'titleEn'} hit={hit}/></a>
+                <a href={trLink} className='Article-text_title'>{mapEmoji(sourceCountry)} <Highlight attribute={translations.en === undefined ? 'headline' : 'translations.en.headline'} hit={hit}/></a>
                 <div>
-                    <span className='Article-text_headline'><Highlight attribute={headlineEn === null ? 'headline' : 'headlineEn'} hit={hit}/></span>
+                    <span className='Article-text_headline'><Highlight attribute={translations.en === undefined ? 'teaser' : 'translations.en.teaser'} hit={hit}/></span>
                     <div className='row'>
-                        <img className='logo' src={mapPublishers(source)} alt={source}/>
+                        <img className='logo' src={mapPublishers(sourceName)} alt={sourceName}/>
                         <span>{formatTime(pubDate)}</span>
                         {tags.map((tag, i) => (<span key={i} className='Article-text_tag'>{tag.replace(/^\/+/g, '')}</span>))}
                     </div>
