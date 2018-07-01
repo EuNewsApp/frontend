@@ -72,7 +72,7 @@ function mapPublishers(publisher) {
     case 'Observador':
         return 'https://i1.wp.com/rubberchickengames.com/wp-content/uploads/2015/03/observador.jpg?resize=1024%2C306';
     case 'Jornal de Notícias':
-        return 'http://www.tvmana1.com/imagens_noticias/618x294_jornal-de-noticias-e-o-primeiro-jornal-portugues-a-ter-artigos-no-instant-articles-do-facebook.jpeg';
+        return 'https://imageporxy.gerogerke.de/http://www.tvmana1.com/imagens_noticias/618x294_jornal-de-noticias-e-o-primeiro-jornal-portugues-a-ter-artigos-no-instant-articles-do-facebook.jpeg';
     default:
         return '❓';
     }
