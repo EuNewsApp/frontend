@@ -1,6 +1,11 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import { InstantSearch, Hits, SearchBox, Pagination } from 'react-instantsearch/dom';
+import {
+    InstantSearch,
+    Hits,
+    SearchBox,
+    Pagination
+} from 'react-instantsearch/dom';
 
 import Header from './Header.jsx';
 import Article from './Article.jsx';
