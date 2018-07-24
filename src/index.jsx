@@ -4,6 +4,7 @@ import {
     InstantSearch,
     Hits,
     SearchBox,
+    ScrollTo,
     Pagination
 } from 'react-instantsearch/dom';
 
@@ -19,11 +20,14 @@ ReactDOM.render(
             appId="XDUDYBW7A8"
             apiKey="08e26b198e4db12a9df52b2f6d6ec16a"
             indexName="articles">
-            <Header>
-                <SearchBox />
-            </Header>
+            <ScrollTo>
+                <Header>
+                    <SearchBox />
+                </Header>
+            </ScrollTo>
             <Hits hitComponent={Article}/>
-            <Pagination/>
+            <Pagination>
+            </Pagination>
             <Footer/>
         </InstantSearch>
     </div>,
